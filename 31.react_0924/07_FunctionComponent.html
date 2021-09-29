@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Component</title>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- babel -->
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="babel.js"></script>
+    
+
+    
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{
+            border: 2px solid red;
+        }
+        .row{
+            margin: 0 auto;
+            width: 1000px;
+            border: 2px solid steelblue;
+        }
+        .col-2{
+            width: 20%;
+            background-color: tomato;
+        }
+        .col-8{
+            width: 80%;
+            background-color: violet;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- spa(Single Page Application)을 제작하기 위해 React를 사용하는것! -->
+
+    <div id="root"></div>
+    <script type="text/babel">
+        // JSX를 사용하여 HTML을 JavaScript로 변환
+        // 클래스를 className으로 사용하고, 스타일을 적용해야함.
+        
+    
+        let title = "JSX 표현식(Expression)"
+        let seeSharp = {
+            title: "react",
+            description: "내용이 들어오는 곳..."
+        }
+
+
+        // 함수
+        // 함수의 첫 글자는 대문자여야 함.
+        function BookTitle(){
+            return(
+                <div className="row">
+                    <h1>My Book</h1>
+                </div>
+            )
+        }
+
+        const BookFooter = ()=> <p>하단 내용이 보이는 곳입니다.</p>
+        const Copyright = () =>{
+            return(
+                <p>Copyright &copy;</p>
+            )
+        }
+        const Content = () => <p>이렇게도 만들 수 있습니다.</p>
+
+
+        ReactDOM.render(
+            <div className="container">
+                <BookTitle/>
+                <div className="row">
+                    <div className="col-2">
+                        {title}
+                    </div>
+                    <div className="col-8">
+                        {seeSharp.title}
+                    </div>
+                </div>
+                <div className="row">
+                    <Content />
+                </div>
+                <BookFooter />
+                <Copyright />
+            </div>
+            ,
+            document.getElementById("root")
+        );
+
+
+        // React.createElement("div",{"style":{"border":"1px solid red"}},document.getElementById("root")
+        // React.createElement("추가할 태그",{"스타일":{"속성":"속성값"}},document.getElementById("지정대상")
+
+
+    </script>
+    
+</body>
+</html>

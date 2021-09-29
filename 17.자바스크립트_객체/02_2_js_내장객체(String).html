@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 - String()</title>
+
+    <script>
+        'use strict';
+
+
+        const str1 = "안녕하세요. javaScript";
+        const str2 = "드라이브, 영화감상, 게임, 쇼핑, 잠자기, 여행";
+        const str3 = "          javaScript          ";
+
+
+
+        console.log(str1.length); //글자 갯수, jQuery에서는 size사용
+
+        console.log(str1.indexOf("a"));
+        console.log(str1.indexOf("java"));
+        console.log(str1.lastIndexOf("a"));
+
+        console.log(str1.charAt(7));
+
+        console.log(str1.includes("java"));
+        console.log(str1.includes("Java")); //대소문자 구별주의
+
+        console.log(str1.substring(0, 7));
+        console.log(str1.substring(7, 11));
+        console.log(str1.substring(7));
+        console.log(str1.substr(7, 4));
+
+        const hobby = str2.split(", ");
+        console.log(hobby);
+        for(let i of hobby){
+            console.log(i);
+        }
+
+        console.log(str1.replace("안녕하세요.", "Hello!"));
+
+        console.log(`||${str3}||`);
+        console.log(`||${str3.trim()}||`);
+
+        console.log(str3.toLowerCase());
+        console.log(str3.toUpperCase());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

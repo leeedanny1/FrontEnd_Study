@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-item</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .wrapper{
+            margin-bottom: 200px;
+            width: 500px; height: 150px;
+            border: 3px solid red;
+            display: flex;
+        }
+        .wrapper > div{
+            width: 100px;
+            border: 2px solid #000;
+            background-color: gold;
+        }
+
+        h2{
+            font-size: 25px; font-weight: 900;
+            text-align: center; line-height: 50px;
+        }
+
+        #container1{align-items: stretch;}
+        #container2{align-items: flex-start;}
+        #container3{align-items: flex-end;}
+        #container4{align-items: center;}
+        #container5{align-items: baseline;}
+
+    </style>
+</head>
+
+<body>
+    <h2>align-item</h2>
+
+    <p>align-item: 플렉스요소의 수직방향 정렬방식을 설정<br><br>
+
+        stretch: 기본값, 플렉스 요소의 높이가 플렉스 컨테이너의 높이와 같게 변경된 뒤 연이어 배치됨 <br>
+        flex-start: 플렉스 요소는 플렉스 컨테이너의 위쪽에 배치됨<br>
+        flex-end: 플렉스 요소는 플렉스 컨테이너의 아래쪽에 배치됨<br>
+        center: 플렉스 요소는 플렉스 컨테이너의 가운데에 배치됨<br>
+        baseline: 플렉스 요소는 플렉스 컨테이너의 기준선에 배치됨<br><br>
+    </p>
+
+    <div id="container1" class="stretch wrapper">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+    </div>
+
+    <div id="container2" class="flex_start wrapper">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+    </div>
+
+    <div id="container3" class="flex_end wrapper">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+    </div>
+
+    <div id="container4" class="center wrapper">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+    </div>
+
+    <div id="container5" class="baseline wrapper">
+        <div id="box1">
+            <h2>1</h2>
+        </div>
+        <div id="box2">
+            <h2>2</h2>
+        </div>
+        <div id="box3">
+            <h2>3</h2>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문3</title>
+
+    <script>
+        'use strict';
+
+        let input = prompt("나이를 입력하세요.");
+
+
+        if(input <= 7){
+            input = "아동";
+        }
+        else if(input <= 19){
+            input = "청소년";
+        }
+        else if(input >= 20){
+            input = "성인";
+        }
+
+        switch(input){
+            case "아동":
+                input += "은 입장료 무료입니다."; break;
+            case "청소년":
+                input += "은 입장료 2000원 입니다."; break;
+            case "성인":
+                input += "은 입장료 5000원 입니다."; break;
+            default:
+                alert("입력값을 확인하세요!"); 
+                input = "입력값을 확인하세요!";
+                break;
+        }
+
+        document.write(input);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

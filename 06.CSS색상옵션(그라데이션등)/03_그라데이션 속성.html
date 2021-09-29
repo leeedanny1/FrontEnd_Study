@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라데이션</title>
+
+    <!--
+        색상값 찾아주는 사이트
+        http://www:colorpicker.com
+        hsla값도 찾아줌
+        http://www.workwithcolor.com/hsl-color-picker-01.htm
+        그라데이션 사이트
+        http://colorzilla.com/gradient-editor
+    -->
+
+    <style>
+        *{margin: 0; padding: 0;}
+        div{margin: 50px; width: 200px; height: 200px;}
+        .box1{
+            background-color: aqua;
+            background: -webkit-linear-gradient(right, red, #000, green);
+        }
+        .box2{
+            background-color: #00ff00;
+            background: -webkit-linear-gradient(70deg, red, #000, green);
+        }
+        .box3{
+            background-color: #EB29FF;
+            background: -webkit-linear-gradient(0deg, red 50%, #000 70%, green 80%);
+        }
+        .box4{
+            background-color: rgba(235, 41, 255, 0.5);
+            background: -webkit-radial-gradient(red 50%, #000 70%, green 80%);
+        }
+        .box5{
+            background-color: hsla(308, 96%, 45%, 1);
+            background: -webkit-radial-gradient(red, #000, green);
+        }
+        .box6{
+            width: 60%;
+            background: #fff132;
+            /*css3버전이라서 접두사 붙여주는게 좋음*/
+            /*크롬*/
+            background: -webkit-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*익스플로러*/
+            background: -ms-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*모질라 파이어폭스*/
+            background: -moz-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*오페라*/
+            background: -o-linear-gradient(top, #fff132 1%, #ff8989 100%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>   
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+
+    <!--그라데이션박스-->
+    <div class="box6">box6</div>
+</body>
+</html>

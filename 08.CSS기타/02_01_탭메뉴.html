@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #all{
+            margin: 0 auto; margin-top: 200px;
+            width: 500px; height: 600px;
+            border: 3px solid #000;
+            position: relative;
+        }
+
+        /*radio 버튼 숨기기*/
+        input{display: none;}
+
+        label{
+            float: left; display: block;
+            width: 125px; height: 50px;
+            background-color: yellow;
+            text-align: center; line-height: 50px;
+            font-size: 25px; font-weight: 900;
+            cursor: pointer; transition: 0.5s;
+        }
+        label:hover{
+            background-color: firebrick; 
+            transition: 0.5s;
+        }
+        /*
+        label:nth-child(1){background-color: darkgoldenrod;}
+        label:nth-child(3){background-color: darkgreen;}
+        label:nth-child(5){background-color: darkmagenta;}
+        label:nth-child(7){background-color: darkturquoise;}
+        */
+
+        .box{
+            width: 500px; height: 550px;
+            position: absolute; top: 50px; left: 0;
+            display: none;
+            font-size: 30px; color: #fff;
+            text-align: center; line-height: 550px;
+        }
+        /*z-index: 표시되는 순서, 클수록 앞에나옴*/
+        .box1{background-color: silver; z-index: 400;}
+        .box2{background-color: skyblue; z-index: 300;}
+        .box3{background-color: slateblue; z-index: 200;}
+        .box4{background-color: tomato; z-index: 100;}
+
+        #all #mn1:checked ~ .box1,
+        #all #mn2:checked ~ .box2,
+        #all #mn3:checked ~ .box3,
+        #all #mn4:checked ~ .box4{display: block;}
+
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <!--
+            label에 for붙여준거는 radio랑 짝지어준것.
+            lable만 눌러도 button 누른거랑 동일효과
+        -->
+        <label for="mn1">menu1</label>
+        <input type="radio" name="tab" id="mn1" checked>
+        <label for="mn2">menu2</label>
+        <input type="radio" name="tab" id="mn2">
+        <label for="mn3">menu3</label>
+        <input type="radio" name="tab" id="mn3">
+        <label for="mn4">menu4</label>
+        <input type="radio" name="tab" id="mn4">
+
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+
+    </div>
+
+</body>
+</html>

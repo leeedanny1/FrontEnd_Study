@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-태그가져오기(잘라내기)메소드</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var el_last = $("#hidden > ul").eq(1);
+            var el_first = $("#hidden > ul").eq(0);
+
+            // 복사할 대상 선택.복사될 위치 지정
+            $(".newEl_last").appendTo(el_last)
+            $(".newEl_first").prependTo(el_first)
+        })
+    </script>
+
+</head>
+<body>
+
+    <div id="hidden">
+        <ul>
+            <li>1(위에 0을 채워주세요)</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4(아래에 5를 채워주세요)</li>
+        </ul>
+    </div>
+    <li class="newEl_last">5</li>
+    <li class="newEl_first">0</li>
+    
+</body>
+</html>

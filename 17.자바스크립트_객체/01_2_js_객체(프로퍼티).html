@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체2(property)</title>
+
+    <script>
+        'use strict';
+
+
+        const user = {
+            userid: "apple",
+            name: "김사과",
+            gender: "여자",
+            hp: "01012345678",
+            birthday: "20001011",
+            memberId: function(){ //속성에 함수도 포함 가능
+                return "korea" + this.hp;
+            }
+        };
+
+        console.log(user.userid);
+        console.log(user.name);
+        console.log(user.gender);
+        console.log(user.hp);
+        console.log(user.birthday);
+        console.log(user.memberId);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

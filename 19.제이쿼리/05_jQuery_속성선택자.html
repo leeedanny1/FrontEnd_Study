@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 위치메소드</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+</head>
+
+<body>
+    <h1 id="css">위치메소드</h1>
+
+    <ul class="main">
+        <li>HTML</li>
+        <li class="css">css</li>
+        <li>javaScript</li>
+        <li class="txt">jQuery</li>
+        <li class="txt">PHP
+            <ul>
+                <li class="parent">HTML</li>
+                <li>css</li>
+                <li>javaScript</li>
+                <li>jQuery</li>
+                <li>PHP
+                    <ul class="list3-3">
+                        <li class="parentEL">HTML</li>
+                        <li>css</li>
+                        <li>javaScript</li>
+                        <li>jQuery</li>
+                        <li>PHP</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="each">
+        <li>제이쿼리 선택자 중 위치 선택자</li>
+        <li>제이쿼리 선택자 중 위치 선택자</li>
+        <li>제이쿼리 선택자 중 위치 선택자</li>
+        <li>제이쿼리 선택자 중 위치 선택자</li>
+        <li>제이쿼리 선택자 중 위치 선택자</li>
+    </ul>
+
+
+    <script>
+        $(document).ready(function(){ 
+            // size 메소드
+            // var num = $(".main > li").size();
+            // alert(`.main > li의 갯수: ${num}`);
+            // var num = $(".main li").size();
+            // alert(`.main li의 갯수: ${num}`);
+
+            // eq 메소드
+            // $(".main > li").eq(2).css("color","red");
+
+            // index 메소드
+            // var i = $(".css").index();
+            // alert(i);
+
+            // first 와 last
+            $(".list3-3 > li").first().css("color","red");
+            $(".list3-3 > li").last().css("color","red");
+
+            // each 문 메소드
+            // this의 의미는 여러개에 동시 이벤트가 적용되는 그 대상33
+            $(".each > li").each(function(){
+                $(this).css("color","red");
+            })
+
+
+        })
+    </script>
+    
+</body>
+</html>

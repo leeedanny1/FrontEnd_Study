@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>기본적인 갤러리의 시작</title>
+<style>
+body {
+	margin: 20px auto;
+	padding: 0;
+	width: 620px;
+	background: #192839;
+}
+
+#caption {
+	position: relative;
+	padding: 10px;
+	font-family: "나눔고딕", "맑은 고딕";
+	font-size: 12px;
+	background: url(images/captionBg.png) repeat-y;
+	color: #fff;
+	border: 1px solid #ccc;
+}
+
+</style>
+<script src="js/jquery.js"></script>
+</head>
+
+<body>
+<div class="thumbs">
+	<a href="images/pic1.jpg" title="image1"><img src="images/th_pic1.jpg" /></a>
+	<em>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</em>
+	<a href="images/pic2.jpg" title="image2"><img src="images/th_pic2.jpg" /></a>
+	<em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dolor ea, qui amet et molestiae, nam possimus</em>
+	<a href="images/pic3.jpg" title="image3"><img src="images/th_pic3.jpg" /></a>
+	<em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut et, ea, dignissimos sunt beatae, eveniet autem aperiam natus accusantium quod incidunt pariatur temporibus unde nesciunt repudiandae harum modi saepe voluptate.</em>
+</div>
+<div id="largeImg"><img src="images/pic1.jpg" alt="image1" /></div>
+
+
+<script>
+	// 글자숨기기
+	$(".thumbs em").hide();
+
+	$(".thumbs a").click(function(e){
+		e.preventDefault();
+
+		// if문 T,F 파악
+		if($("#caption")){
+			$("#caption").remove();
+		}
+
+		// largeImg 교체부분
+		var path = $(this).attr("href"); // 속성값 가져오기
+		if(path != $("#largeImg img").attr("src")){			
+			$("#largeImg img").attr({src:path}); // 특정요소 속성으로 값을 대입
+			$("#largeImg img").css({opacity:0})
+			.stop()
+			.animate({opacity:1},1000);
+		}
+
+		// 설명문 추가부분
+		var msg = $(this).next("em").text();
+		// 태그추가
+		$("#largeImg").append("<div id='caption'></div>");
+		// 추가된 태그에 텍스트 삽입
+		$("#largeImg #caption").text(msg);
+		var posy = $("#largeImg #caption").height() + 27;
+		//'-=' + posy   => posy = posy-posy 를 의미
+		$("#largeImg #caption").animate({top:'-=' + posy + "px"},500);
+	});
+
+</script>
+</body>
+</html>

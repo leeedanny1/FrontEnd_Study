@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="css/style01.css">
+
+    <!-- react CDN -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script>
+
+</head>
+<body>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        var Rectangle = React.createClass({
+            displayName: "Rectangle",
+
+            render: function render(){
+                var recstyle = {
+                    height: 150,
+                    backgroundColor:this.props.color
+                };
+                return React, createElement('div', {style:recstyle});
+            }
+        });
+        var ColorName = React.createClass({
+            displayName: "ColorName",
+
+            render: function render(){
+                var nameStyle = {
+                    fontWeight: "bold",
+                    padding: 15,
+                    margin: 0,
+                    textAlign: "center"
+                };
+                return(
+                    React.createElement(
+                        "p",
+                        {style: nameStyle},
+                        this.props.color
+                    )
+                )
+            }
+        })
+
+        var ColorCard = React.createClass({
+            displayName:"ColorCard",
+
+            render: function render(){
+
+                
+            }
+        })
+    </script>
+    
+</body>
+</html>

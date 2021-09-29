@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>text(문단)관련CSSv2</title>
+
+    <style>
+        /*행간 lile-height*/
+        /*행간은 원래글자 크기 포함*/
+        .txt1{font-size: 20px; line-height: 25px;}   
+
+        /*자간, 글자사이간격*/
+        .txt2{letter-spacing: 50px;}
+
+        /*단어사이 간격*/
+        .txt3{word-spacing: 100px;}
+
+        /*들여쓰기*/
+        /*양수면 오른쪽, 양수면 왼쪽으로 이동*/
+        .txt4{text-indent: 50px;}
+
+        /*정렬*/
+        /*align 정렬은 태그자체 정렬이 아닌, 태그 !!내부 요소!!에 대한 정렬*/
+        .txt5{background-color: skyblue; text-align: center;}
+
+        /*밑줄, 취소선, 윗줄, 없애기*/
+        .txt6{text-decoration: underline;}
+        .txt6-2{text-decoration: line-through;}
+        .txt6-3{text-decoration: overline;}
+        .btn01{text-decoration: none;}
+        .btn01:hover{text-decoration: line-through;}
+
+        /*대소문자 관련*/
+        /*첫문자만 대문자, 단어(띄어쓰기)마다 적용됨*/
+        .txt7{text-transform: capitalize;}
+        /*전체소문자, 대문자*/
+        .txt7-1{text-transform: lowercase;}
+        .txt7-2{text-transform: uppercase;}
+        /*없음*/
+        .txt7-3{text-transform: none;}
+    </style>
+</head>
+
+<body style="height: 3000px;">
+    <p class="txt1">
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요
+    </p>
+
+    <p class="txt2">
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요 <br>
+        안녕하세요
+    </p>
+
+    <p class="txt3">
+        안녕 하세요 <br>
+        안녕 하세요 <br>
+        안녕 하세요 <br>
+        안녕 하세요 <br>
+        안녕 하세요
+    </p>
+
+    <p class="txt4">
+        안녕하세요
+    </p>
+
+    <p class="txt5">
+        안녕하세요
+    </p>
+
+    <p class="txt6">
+        안녕하세요
+    </p>
+
+    <p class="txt6-2">
+        안녕하세요
+    </p>
+
+    <p class="txt6-3">
+        안녕하세요
+    </p>
+
+    <br><br>
+
+    <a href="#" class="btn01">네이버로 가기</a>
+
+    <br><br>
+
+    <p class="txt7">lee daehee</p>
+    <p class="txt7-1">LEE DAEHEE</p>
+    <p class="txt7-2">lee daehee</p>
+    <p class="txt7-3">lee daehee</p>
+
+
+</body>
+</html>

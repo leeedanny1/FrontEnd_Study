@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        body{height: 5000px;}
+
+        /*
+        웹브라우저의 접두사
+        
+        파이어폭스 -moz-
+        크롬, 사파리 -webkit-
+        오페라 -o-
+        익스플로러 -ms-
+
+        css3는 웹표준으로서 완성된게 아니라 
+        계속적으로 개발되고 있기 때문에
+        속성과 속성값 앞에 해당하는 웹사이트의 접두사를 붙여서 사용
+
+        안 할 수 있었는데 2007년쯤 웹브라우저 개발자 회의에서
+        모 회사에서 틀어버리는바람에
+        협의가 제대로 진행되지 못했음.
+
+        
+        선택자{border: 1px solid;
+            -webkit-border: 1px solid;
+            -ms-border: 1px solid;
+            -moz-border: 1px solid;
+            -o-border: 1px solid;
+        }
+        */
+
+        .box1{margin: 100px;
+            width: 200px; height: 200px;
+            border: 1px solid;
+            font-size: 30px;
+            /*모서리 둥글게*/
+            border-radius: 100px 50px 300px 400px;
+            /*
+            접두사 없어도, 로컬호스트에서는 잘 실행 됨
+            서버에 올라 갔을 때 영향 많이 받음
+            */
+        }
+
+        .box2{
+            margin: 100px;
+            width: 150px; height: 150px;
+            background-color: deepskyblue;
+            /*그림자*/
+            box-shadow: 10px -10px 5px firebrick;
+            /*
+            box-shadow: [dx] [dy] [blur] [spread] [set]
+            dx: 그림자의 가로방향 위치
+            dy: 그림자의 세로방향 위치
+            음수이면 방향 바뀜
+            blur: 흐려짐정도
+            spread: 번짐 정도
+            set: 그림자의 형태
+            ●outset: 요소 바깥쪽으로 그림자가 떨어짐(기본값)
+            ●inset: 요소 안쪽으로 그림자가 떨어짐
+            */
+        }
+
+        h1{
+            font-size: 60px; font-weight: 900;
+            color: firebrick;
+            /*텍스트 그림자는 여러번 사용 가능*/
+            text-shadow: 0 0 4px #ccc,
+            0 -3px 4px #ff3,
+            1px -6px 6px #fd3,
+            -1px -9px 11px #f80,
+            1px -12px 18px #f20;
+        }
+
+        .txt{
+            border: 3px dotted red;
+            width: 400px; padding: 10px;
+            white-space: nowrap;
+            overflow: scroll;
+            /*
+            white-space: 글자 자동줄바꿈 설정속성
+            white-space: normal: 기본으로 자동 줄바꿈
+            white-space: nowrap: 자동 줄바꿈 금지
+
+            overflow: 대상의 크기에서 벗어나는 자식요소들을 보일지 말지 설정하는 스타일
+            :visible; 보임 기본이라서 선언안해도 됨
+            :hiddne; 숨김
+            :scroll; 벗어난만큼의 크기를 보이기 위해 스크롤 생성
+            */
+
+        }
+
+        .box3{
+            margin: 50px;
+            height: 120px; width: 200px;
+            background-color: crimson;
+            border: 10px solid;
+
+        }
+
+        #header{
+            width: 1000px; height: 150px;
+            background-color: #ccc;
+        }
+        #header .logo{
+            border: 3px solid;
+            float:left;
+            width: 120px; height: 150px;
+            background-color: #f20;
+            /*커진 사이즈 따라 박스 사이즈 자동 조절*/
+            box-sizing: border-box;
+            /*
+            box-sizing: 대상의 크기에 테두리 속성 포함시키는 스타일
+            box-sizing: border-box; 패딩하고 border를 자신의 크기에 포함
+            box-sizing: content-box; 마진을 포함
+            */
+        }
+        #header .nav{
+            float:left;
+            width: 800px; height: 150px;
+            background-color: #ff3;
+        }
+        #header .info_mn{
+            float:left;
+            width: 80px; height: 150px;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">div</div>
+
+    <div class="box2">div2</div>
+
+    <h1>텍스트 그림자</h1>
+
+    <p class="txt">
+        CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일
+        CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일
+        CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일CSS텍스트 스타일
+    </p>
+
+    <div class="box3">box3</div>
+
+    <header id="header">
+        <div class="logo">logo</div>
+        <div class="nav">navigation</div>
+        <div class="info_mn">info menu</div>
+    </header>
+
+</body>
+</html>

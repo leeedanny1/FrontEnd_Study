@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while, if문_4_구구단</title>
+
+    <script>
+        'use strict';
+
+        const dan = Number(prompt("몇 단을 출력할까요?"));
+        
+        document.write(`<h1>${dan}단을 선택하셨습니다.</h1>`);
+
+        let i = 1;
+        while(i <= 9){
+            document.write(`<p>${dan} * ${i} = ${dan * i}</p>`);
+            i++;
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

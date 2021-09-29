@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 요소선택자</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+</head>
+
+<body>
+    <h1>요소선택자</h1>
+
+    <ul>
+        <li>HTML</li>
+        <li>css</li>
+        <li>javaScript</li>
+        <li>jQuery</li>
+        <li>PHP</li>
+    </ul>
+
+
+    <script>
+        /*
+        $(대상) // 제이쿼리함수 - 태그를 추가하거나 삭제, 스타일 수정
+
+        $(대상).메소드().메소드(); // 체이닝기법
+        */
+
+        $(document).ready(function(){ 
+        // 웹 브라우저로 보냈을 때 {}메소드를 실행
+
+            $("h1").css('background','blue');
+            
+            $("li").css({color:"red", background:"green"});
+
+
+        })
+    </script>
+    
+</body>
+</html>

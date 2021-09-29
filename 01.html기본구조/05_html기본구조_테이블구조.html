@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<title>테이블구조</title>
+</head>
+
+<body style="height: 10000px;">
+    
+    <!--
+        테이블의 크기와 선의 굵기 지정
+        tr은 줄
+        td는 칸
+    -->
+    <table width="500" height="600" border="1">
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <br><br><br>
+
+
+    <!--
+        칸 합치기
+        colspan 태그사용
+        태그 사용한 뒤의 칸이랑 합쳐짐
+    -->
+    <table width="500" height="600" border="1">
+        <tr> <!--첫행-->
+            <td colspan="4"></td>
+        </tr>
+
+        <tr> <!--두번째행-->
+            <td></td>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr> <!--세번째행-->
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr> <!--네번째행-->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <br><br><br>
+
+
+    <!-- 칸 합치기 연습 -->
+    <table width="500" height="600" border="1">
+        <tr> <!--첫행-->
+            <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr> <!--두번째행-->
+            <td colspan="3"></td>
+            <td></td>
+        </tr>        
+        <tr> <!--세번째행-->
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr> <!--네번째행-->
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr> <!--다섯번째행-->
+            <td colspan="4"></td>
+        </tr>                
+    </table>
+
+
+    <br><br><br>
+
+
+    <!--
+        줄 합치기
+        rowspan 태그사용
+        다음줄의 칸(td)와 합쳐집
+    -->
+    <table width="400" height="400" border="1">
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            
+            <td></td>
+        </tr>
+    </table>    
+
+
+    <br><br><br>
+
+
+    <!-- 행열 합치기 연습 -->
+    <table width="500" height="600" border="1">
+        <tr> <!--첫행-->
+            <td rowspan="3"></td>
+            <td colspan="3"></td>            
+        </tr>
+
+        <tr> <!--두번째행-->
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+        </tr>
+
+        <tr> <!--세번째행-->
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr> <!--네번째행-->
+            <td colspan="4"></td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수치메소드_엘리먼트의 위치</title>
+
+    <style>
+        html * {margin:0; padding:0; }
+        #wrapper{
+            position: absolute;
+            width: 500px; height: 500px;
+            border: 3px solid blue;
+            left: 100px; top: 150px;
+        }
+        .box{
+            position: absolute;
+            width: 100px; height: 50px; top: 50px; 
+            background: red; color: white;
+        }
+    </style>
+
+
+    <!-- <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script> -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var poinfo = $("#position_info");
+            var box = $(".box");
+
+            box.draggable({
+                drag:function(){
+                    poinfo.find(".ol").text(box.offset().left);
+                }
+                
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="position_info">
+        <span>offset().left = </span><span class="ol">0</span><br>
+        <span>offset().top = </span><span class="ot">0</span><br>
+        <span>position().left = </span><span class="pl">0</span><br>
+        <span>position().top = </span><span class="pt">0</span><br><br>
+        <span>box를 드래그 해보세요.</span>
+    </div>
+
+    <div id="wrapper">
+        <div class="box">
+            <span>box</span>
+        </div>
+    </div>
+    
+
+</body>
+</html>

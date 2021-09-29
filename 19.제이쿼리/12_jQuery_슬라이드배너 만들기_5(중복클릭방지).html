@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드배너 만들기</title>
+
+    <script src="js/jquery.js"></script>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color:#333;}
+        ul, li{ list-style: none;}
+
+        #main_img{
+            position: relative;
+            width: 100%; height:350px;
+        }
+        #main_img .img_group{
+            width: 100%; height:350px;
+        }
+        #main_img .images{
+            position: relative;
+            width: 100%; height:350px; 
+        }
+        #main_img .images li{
+            position: absolute; top:0;
+            width: 100%; height:350px; 
+            }
+        #main_img .images li.img01{ 
+            left: 0%; 
+            background-color: burlywood;
+        }
+        #main_img .images li.img02{ 
+            left: 100%; 
+            background-color: cornflowerblue;
+        }
+        #main_img .images li.img03{ 
+            left: 200%; 
+            background-color: cyan;
+        }
+
+        #main_img .btns{
+            position: absolute;
+            bottom: 50px; left: 50%;
+            margin-left: -32.5px;
+            z-index: 5000;
+        }
+        #main_img .btns li{
+            float: left;
+            margin-right: 10px;
+            width: 15px; height: 15px; 
+            background-color: gray;
+            border-radius: 50%;
+        }
+        #main_img .btns li a{
+            display: block;
+            text-indent: -9999px;
+        }
+
+        #main_img .l_btn{
+            position: absolute;
+            top: 160px; left: 50px;
+            z-index: 9999;
+            width: 50px; height: 50px;
+            text-align: center; line-height: 50px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background-color: white;
+            cursor: pointer;
+        }
+        #main_img .r_btn{
+            position: absolute;
+            top: 160px; right: 50px;
+            z-index: 9999;
+            width: 50px; height: 50px;
+            text-align: center; line-height: 50px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background-color: white;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            var current = 0;
+            var clearIntervalId;
+
+            // 이전, 다음 버튼
+            $(".l_btn").click(function(){
+                var l = current - 1;
+                if(l == 0){
+                    l = 3;
+                }
+                movie_reverse(l);
+            });
+            $(".r_btn").click(function(){
+                var r = current + 1;
+                if(r == 3){
+                    r = 0;
+                }
+                movie(r);
+            });
+
+
+            $("#main_img").on({
+                "mouseover":function(){
+                    clearInterval(setIntervalId);
+                },
+                "mouseout":function(){
+                    timer();
+                }
+            });
+
+            timer();
+            function timer(){
+                setIntervalId = setInterval(function(){
+                    var n = current + 1;
+                    if(n==3){
+                        n=0;
+                    }
+                movie(n);
+            }, 3000);
+        }
+                
+            function movie(n){
+                if(current == i) return;
+
+                var currentEl = $(".images > li").eq(current);
+                var nextEl = $(".images > li").eq(n);
+
+                currentEl.css({left:"0%"}).animate({left:"-100%"});
+                nextEl.css({left:"100%"}).animate({left:"0%"});
+
+                current = n;
+            }
+
+            function movie_reverse(n){
+                if(current == i) return;
+                
+                var currentEl = $(".images > li").eq(current);
+                var nextEl = $(".images > li").eq(n);
+
+                currentEl.css({left:"0%"}).animate({left:"100%"});
+                nextEl.css({left:"-100%"}).animate({left:"0%"});
+
+                current = n;
+            }
+            
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="main_img">
+        <div class="img_group">
+            <ul class="images">
+                <li class="img01">img01</li>
+                <li class="img02">img02</li>
+                <li class="img03">img03</li>
+            </ul>
+        </div>
+
+        <ul class="btns">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+
+        <!-- 좌우버튼 -->
+        <div class="l_btn">L</div>
+        <div class="r_btn">R</div>
+    </div>
+        
+</body>
+</html>

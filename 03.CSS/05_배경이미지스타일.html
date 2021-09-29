@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 스타일시트</title>
+
+    <style>
+        /*배경 이미지*/
+        /*이미지경로; 반복여부; 위치;*/
+        body{height: 5000px;
+            background-image: url("images/img01.jpg"); 
+            
+            /*반복없음*/
+            background-repeat: no-repeat;
+            /*x축 반복*/
+            /*background-repeat: repeat-x;*/
+            /*y축 반복*/
+            /*background-repeat: repeat-y;}*/
+
+            /*x축 좌표 y축 좌표*/
+            /*단위 %, 키워드도 가능*/
+            /*세로 %,키워드 정렬같은경우는 페이지의 사이즈가 지정돼있어야함.*/
+            background-position: 500px 100px;
+            background-position: 50% 100px;
+            background-position: left center;
+
+
+            /*한 줄로 입력 가능*/
+            background: url(images/img01.jpg) center center no-repeat;
+
+            /*스크롤 되더라도 배경이미지 고정*/
+            background: url(images/img01.jpg) 0 0 repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    
+</body>
+</html>

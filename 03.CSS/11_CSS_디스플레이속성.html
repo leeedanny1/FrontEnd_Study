@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이속성</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        div{
+            width: 150px; height: 150px;
+            background-color: coral;
+            margin: 30px;
+            /*디스플레이속성*/
+            display: inline;
+        }
+        
+        /*보이지 않게만 만들기, 자리는 유지*/
+        /*hidden, visible*/
+        .box1{visibility: hidden;}
+
+        /*자리(레이아웃)도 완전 숨기기*/
+        /*
+        block           - 블록레벨 요소로 만듬
+        inline          - 인라인 요소로 만듬
+        inline-block    - 인라인이면서 가로값과 세로값이 적용됨
+        none            - 숨기기
+        */
+        .box2{display: none;}
+
+        /*투명도, 0~1, 자리 유지*/
+        .box3{opacity: 0.5;}
+
+        /*보인다 보이지않는다, 있다 없다 의 개념으로 생각*/
+
+
+        span{
+            width: 200px; height: 150px;
+            background-color: darkblue;
+            margin: 20px;
+            /*블록요소로 바꾸면 크기도 적용*/
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+
+    <div class="box4">box4</div>
+    <div class="box4-1">box4-1</div>
+    <div class="box4-2">box4-2</div>
+
+    <span>인라인레벨 요소</span>
+    <span>인라인레벨 요소</span>
+    <span>인라인레벨 요소</span>
+    <span>인라인레벨 요소</span>
+
+</body>
+</html>

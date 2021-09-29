@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-html메소드2</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".del_btn").click(function(){
+                $("#wrap > ul > li").eq(1).empty();
+            });
+            $(".input_btn").click(function(){
+                $("#wrap > ul > li").eq(1).text("3-2(새로 입력된 내용)");
+            });
+            $(".clone_btn").click(function(){
+                var cloneEl = $(".copy").clone();
+                $("#wrap > ul").append(cloneEl);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <div id="wrap">
+                    <ul>
+                        <li>3-1</li>
+                        <li>3-2(이 부분 내용 삭제)</li>
+                        <li>3-3</li>
+                        <li>3-4</li>
+                        <li>3-5</li>
+                    </ul>
+                </div>
+            </li>
+            <li>4</li>
+            <li>5</li>
+            <li class="copy">6</li>
+        </ul>
+    </div>
+
+    <button class="del_btn">내용 삭제하기</button>
+    <button class="input_btn">내용 추가하기</button>
+    <button class="clone_btn">내용 복사하기</button>
+
+</body>
+</html>

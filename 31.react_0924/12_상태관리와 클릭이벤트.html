@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태관리와 클릭이벤트</title>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- babel -->
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="babel.js"></script>
+    
+
+    
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{
+            border: 2px solid red;
+        }
+        .row{
+            margin: 0 auto;
+            width: 1000px;
+            border: 2px solid steelblue;
+        }
+        .col-2{
+            width: 20%;
+            background-color: tomato;
+        }
+        .col-8{
+            width: 80%;
+            background-color: violet;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- spa(Single Page Application)을 제작하기 위해 React를 사용하는것! -->
+
+    <div id="root"></div>
+    <script type="text/babel">
+        // JSX를 사용하여 HTML을 JavaScript로 변환
+        // 클래스를 className으로 사용하고, 스타일을 적용해야함.
+
+        // Props는 properties의 줄임말
+        // 어떠한 값을 컴포넌트에게 전달해줘야 할 때, props를 사용
+        // 컴포넌트가 1개 이상이면, <div></div> 로 묶어준다. -> 다른방식, 태그를 빼고 넣는 방식: <></>
+        // <></>를 프레이먼트라고 하면 태그없이 기호로 묶어주는 기능
+        // function(){} 반드시 중괄호 안에 return()메소드를 삽입해야 한다.
+        
+    
+        let title = "JSX 표현식(Expression)"
+        let seeSharp = {
+            title: "react",
+            description: "내용이 들어오는 곳..."
+        }
+
+
+        // 함수
+        // 함수의 첫 글자는 대문자여야 함.
+        function BookTitle(){
+            return(
+                <div className="row">
+                    <h1>My Book</h1>
+                </div>
+            )
+        }
+
+
+
+        const BookFooter = ()=> <p>하단 내용이 보이는 곳입니다.</p>
+        const Copyright = () =>{
+            return(
+                <p>Copyright &copy;</p>
+            )
+        }
+
+        const BookFooter =() => <p>제가 집필한 책 목록입니다.</p>
+
+        const Copyright =() =>{
+            return (<p>Copyright &copy;</p>)
+        }
+
+        // props이용
+        function BookCard(props){
+            return(
+            <div className="container">
+                <div className="row">
+                    <div className="col-2">
+                        {props.title}
+                    </div>
+                    <div className="col-8">
+                        {props.description}
+                    </div>
+                </div>
+            </div>
+            )
+        }
+
+        // 구조파괴할당
+        function BookCardOther({title, description}){
+            return(
+            <div className="container">
+                <div className="row">
+                    <div className="col-2">
+                        {title}
+                    </div>
+                    <div className="col-8">
+                        {description}
+                    </div>
+                </div>
+            </div>
+            )
+        }
+
+
+
+        // state, setState
+        //.BookList 대상으로 컴포넌트 생성
+        class BookList extends React.Component{
+            state ={ // 상태의 초기값을 생성
+                theme: 'blue'
+            }
+            // 상태가 변화되었을 때 값을 선언
+            blueTheme = () => this.setState({
+                theme:'blue'
+            })
+            whiteTheme = () => this.setState({
+                theme: 'white'
+            })
+
+            render(){
+                return(
+                    <>
+                        <div>{this.state.theme === "white" ? "white theme": "blue theme"}</div>
+                        <div>
+                            <button onClick={()=>{this.setState({theme: 'white'})}}>White 1</button>
+                            <button onClick={this.whiteTheme}> White2</button>
+                            <button onClick={()=>{this.setState({theme: 'blue'})}}>blue 1</button>
+                            <button onClick={this.blueTheme}> Blue2</button>
+                        </div>
+                        <BookCard title="a_react1제목1" description="a_react1 설명문입니다."/>
+                        <BookCard title="a_react1제목2" description="a_react2 설명문입니다."/>
+                    </>
+                )
+            }
+        }
+
+
+
+
+        //클래스형 컴포넌트
+        class BookApp extends React.Component{
+            render(){
+                return(
+                    <>
+                        <BookTitle />
+                        <BookListOther sortOrder="ASC"/>
+                        <BookFooter />
+                        <Copyright />
+                    </>
+                )
+            }
+        }
+
+
+
+        // 최종 렌더링
+        ReactDOM.render(
+            <BookApp />
+            ,
+            document.getElementById("root")
+        );
+
+
+        // React.createElement("div",{"style":{"border":"1px solid red"}},document.getElementById("root")
+        // React.createElement("추가할 태그",{"스타일":{"속성":"속성값"}},document.getElementById("지정대상")
+
+
+    </script>
+    
+</body>
+</html>

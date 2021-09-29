@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cons:after{content:''; display: block; clear: both;}
+
+/* header */
+#header{
+    float: left;
+    width: 100%;
+}
+
+    /* 헤더의 상단 */
+    #header .h_top{
+        position: relative;
+        margin: 0 auto;
+        width: 1100px; height: 95px;
+    }
+        /* 헤더 로고 */
+        #header .main_logo{
+            float: left;
+        }
+
+        /* 인포메뉴 */
+        #header .info_mn{
+            position: absolute;
+            top: 20px; left: 210px;
+        }
+        #header .info_mn > li{
+            float: left;
+            margin-right: 15px;
+        }
+        #header .info_mn > li > a{
+            font-size: 10px;
+        }
+        
+        /* 후기, 상담메뉴 */
+        #header .q_mn{
+            position: absolute;
+            top: 60px; left: 210px;
+        }
+        #header .q_mn > li{
+            float: left;
+            margin-right: 15px;
+        }
+        #header .q_mn > li > a{
+            font-size: 15px;
+        }
+
+        /* 국가선택이미지 */
+        #header .lang{
+            position: absolute;
+            top: 20px; right: 20px;
+        }
+
+        /* notice게시판 */
+        #header .notice{
+            position: absolute;
+            top: 60px; right: 20px;
+        }
+            #header .notice > li{
+                float: left;
+            }
+
+    #header .main_nav{
+        width: 100%; height: 45px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+        #header .main_nav ul{
+            margin: 0 auto;
+            width: 1100px; height: 45px;
+        }
+        #header .main_nav li{
+            float: left;
+            width: 137.75px; height: 43px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center; line-height: 43px;
+        }
+            #header .main_nav li:first-child{
+                width: 135px;
+                border-left: 1px solid #ccc;
+            }
+        #header .main_nav a{
+            display: block;
+            height: 43px;
+            font-size: 16px;
+        }
+    #header .h_bottom{
+        width: 100%; height: 140px;
+        background: url(../images/bg_main_slogan.jpg) no-repeat 50% 0;
+    }
+
+
+    /* ----------------------------------------------------------------- */
+
+
+
+/* 첫 번째 섹션 */
+#main_img{
+    float: left;
+    width: 100%; height: 400px;
+    background: url(../images/main1.png) no-repeat 50% 0;
+}
+
+
+
+/* 두 번째 섹션 */
+#contents{
+    float: left;
+    width: 100%;
+}
+
+    #contents .con_in{
+        margin: 0 auto;
+        width: 1100px;
+    }
+        #contents article{
+            float: left;
+        }
+        #contents article > img{
+            float: left; /*이미지의 공백을 없애기 위해서*/
+        }
+        /* 컨텐츠 첫 번째 라인 */
+        #contents .about{
+            width: 275px; height: 355px;
+            background-color: aqua;
+        }
+            #contents .about .about_top{
+                height: 177.5px;
+                padding: 15px 15px 0 20px;
+            }
+            #contents .about .about_top h3{
+                font-size: 25px;
+                margin-bottom: 25px;
+            }
+            #contents .about .about_top h4{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            #contents .about .about_top p{
+                font-size: 12px;
+            }
+        #contents .event{
+            width: 275px; height: 355px;
+        }
+        #contents .movie{
+            width: 550px; height: 355px;
+        }
+        
+        /* 컨텐츠 두 번째 라인 */
+        #contents .system{
+            width: 275px; height: 710px;
+        }
+        #contents .b_a_con{
+            width: 550px; height: 710px;
+        }
+        #contents .b_a_con img{
+            float: left;
+        }
+            #contents .b_a_con .photo_a{
+                width: 550px; height: 285px;
+            }
+                #contents .b_a_con .box{
+                    position: relative;
+                    float: left;
+                    width: 137px; height: 142px;
+                }
+                #contents .b_a_con .in_box{
+                    position: absolute; top: 0; left: 0;
+                    z-index: 100;
+                    width: 131px; height: 136px;
+                    border: 3px solid tomato;
+                }
+                #contents .b_a_con .box:hover .in_box{
+                    transition: 0.5s;
+                }
+            #contents .b_a_con .ba_mn{
+                width: 550px; height: 140px;
+                background-color: dimgray;
+            }
+                #contents .ba_mn h3{
+                    padding: 25px 0 20px 0;
+                    color: white; font-size: 30px;
+                    text-align: center;
+                }
+                #contents .ba_mn ul{
+                    margin: 0 auto;
+                    width: 490px; height: 30px;
+                    border: 1px solid #ccc;
+                }
+                #contents .ba_mn li{
+                    float: left;
+                    width: 25%; height: 100%;
+                    border-right: 1px solid #ccc;
+                    box-sizing: border-box;
+                    text-align: center; line-height: 30px;
+                }
+                #contents .ba_mn li:last-child{
+                    border-right: none;
+                }
+                #contents .ba_mn li:hover{
+                    background-color: darkgoldenrod;
+                    transition: 0.7s;
+                }
+                #contents .ba_mn a{
+                    display: block;
+                    font-size: 14px; color: white;
+                }
+            #contents .b_a_con .photo_b{
+                width: 550px; height: 285px;
+            }
+        #contents .history{
+            width: 275px; height: 710px;
+            background-color: darkslateblue;
+        }
+
+        /* 컨텐츠 세 번째 라인 */
+        #contents .news{
+            margin-top: 25px; padding-right: 15px;
+            width: 350px; height: 215px;
+            border-right: 1px solid #333;
+            box-sizing: border-box;
+        }
+            #contents .news ul{
+                margin-top: 10px;
+            }
+            #contents .news li{
+                margin-bottom: 12px; padding-bottom: 12px;
+                border-bottom: 1px dotted #ccc;
+            }
+            #contents .news p{
+                font-size: 16px;
+            }
+            #contents .news span{
+                font-size: 10px;
+            }
+        #contents .desk{
+            margin-top: 25px;
+            width: 400px; height: 215px;
+            border-right: 1px solid #333;
+            box-sizing: border-box;
+        }
+            #contents .desk h3{
+                margin-left: 32.5px;
+            }
+            #contents .desk h4{
+                margin-top: 10px; margin-left: 32.5px;
+            }
+        #contents .location{
+            margin-top: 25px;
+            width: 350px; height: 215px;
+        }
+            #contents .location h3{
+                margin-left: 10px;
+            }
+            #contents .location h4{
+                margin-top: 10px; margin-left: 10px;
+            }
+
+
+
+/* footer */
+#footer{
+    float: left;
+    width: 100%; height: 150px;
+}
+
+    #footer .f_top{
+        width: 100%; height: 45px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+        #footer .f_top_in{
+            margin: 0 auto;
+            width: 1100px; height: 45px;
+        }
+            #footer .info_mn li{
+                float: left;
+                margin-right: 30px;
+                line-height: 45px;
+            }
+            #footer .info_mn li a{
+                font-size: 13px;
+            }
+
+            #footer .sns_mn{
+                float: right;
+            }
+            #footer .sns_mn li{
+                float: left;
+                border-right: 1px solid #ccc;
+            }
+            #footer .sns_mn li:first-child{
+                border-left: 1px solid #ccc;
+            }
+
+    #footer .f_all_mn{
+        width: 100%; height: 300px;
+        background-color: #ccc;
+    }
+        #footer .f_all_mn_in{
+            padding-top: 35px;
+            margin: 0 auto;
+            width: 1100px; height: 300px;
+        }
+            #footer .main_mn > li{
+                float: left;
+                margin-right: 60px;
+            }
+                #footer .sub_mn > li:first-child{
+                    margin-bottom: 15px;
+                }
+                #footer .sub_mn > li > h4{
+                    font-size: 16px;
+                }
+                #footer .sub_mn > li{
+                    text-align: center;
+                }
+                #footer .sub_mn > li > a{
+                    font-size: 13px;
+                }
+                #footer .sub_mn > li > a:hover{
+                    text-decoration: underline
+                }
+
+    #footer .f_copy{
+        margin: 0 auto;
+        width: 1100px; height: 300px;
+    }

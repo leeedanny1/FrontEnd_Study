@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문3</title>
+
+    <script>
+        'use strict';
+
+        let num;
+        num = prompt("번호를 선택하세요");
+
+        switch(num){
+            case "1":
+                document.write("예금 조회를 선택하셨습니다."); break;
+            case "2":
+                document.write("예금 출금을 선택하셨습니다."); break;
+            case "3":
+                document.write("예금 입금을 선택하셨습니다."); break;
+            case "4":
+                document.write("예금 이체를 선택하셨습니다."); break;
+            default:
+                document.write("번호를 잘 못 누르셨습니다."); break;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>switch ~ case</h1>
+    <p>
+        switch(변수 또는 수식){
+            case 값1:
+                실행문1;
+                break;(끝낼 시)
+            case 값2:
+                실행문2;
+                break;(끝낼 시)
+            case 값3:
+                실행문3;
+                break;(끝낼 시)
+            ...
+            default:
+                실행문;
+        }
+    </p>
+
+</body>
+</html>

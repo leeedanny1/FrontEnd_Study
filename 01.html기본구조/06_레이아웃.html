@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>가상 홈페이지 레이아웃 연습</title>
+
+        <!--내부 스타일시트-->
+        <!--내부스타일시트는 이 문서안에있는 선택자만 전체 적용-->
+        <style>
+            /* 스타일시트 사용방법 */
+            /* 선택자{속성: 속성값; 속성: 속성값; } */
+
+            /* a태그 밑줄 없음, 색 지정 */
+            a{text-decoration: none; color: #333;}
+        </style>
+    </head>
+
+    <body>
+        <!-- ***** MAIN TABLE ***** -->
+        <!--align 정렬속성, left, center, right-->
+        <table width="1000" height="700" border="1" align="center">
+            <!--tr td태그 생성시 tr/td*n 하면 td갯수 원하는만큼 자동생성-->
+            <tr><!--상단-->
+                <td height="120">
+                    <!--상단 테이블 구성-->
+                    <table width="1000" height="120", border="1">
+                        <tr>
+                            <td colspan="5" height="20" align="right">
+                                HOME | SITEMAP | CONTACT US
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="120" height="80"> <!--logo-->
+                                <img src="images/logo.jpg" alt="logo">
+                            </td>
+
+                            <td width="50"> <!--blank-->
+                            </td>
+
+                            <td> <!--navigation-->
+                                <!--내비게이션 테이블 구성-->
+                                <table width="680" height="80" border="1">
+                                    <tr align="center">
+                                        <td><a href="#">회사소개</a></td>
+                                        <td><a href="#">사업분야</a></td>
+                                        <td><a href="#">제품정보</a></td>
+                                        <td><a href="#">채용정보</a></td>
+                                        <td><a href="#">고객센터</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td width="50"> <!--blank-->                           
+                            </td> 
+
+                            <td width="100"> <!--short cut button-->
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5" height="20">아무글자나</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr><!--메인이미지-->
+                <td height="300">
+                    <img src="images/main_img.jpg" alt="메인이미지">
+                </td>
+            </tr>
+
+
+            <tr><!--컨텐츠-->
+                <td height="300">
+                    <!--컨텐츠 내부 테이블-->
+                    <table width="1000" height="300" border="1">
+                        <tr>
+                            <td width="333">
+                                <a href="#"><img src="images/banner01.jpg" alt=""></a>
+                                <a href="#"><img src="images/banner02.jpg" alt=""></a>
+                                <br>
+                                <a href="#"><img src="images/banner03_bg.jpg" alt=""></a>
+                            </td>
+                            <td width="333">
+                                <h2>공지사항</h2>
+                                <ul>
+                                    <li>홈페이지 방문을 환영합니다.</li>
+                                    <li>홈페이지 방문을 환영합니다.</li>
+                                    <li>홈페이지 방문을 환영합니다.</li>
+                                    <li>홈페이지 방문을 환영합니다.</li>
+                                </ul>
+                            </td>
+                            <td width="333">
+                                <h2>보도자료</h2>
+                                <ul>
+                                    <li>2021년 경력채용</li>
+                                    <li>2021년 경력채용</li>
+                                    <li>2021년 경력채용</li>
+                                    <li>2021년 경력채용</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr><!--하단-->
+                <td height="80"></td>
+            </tr>
+
+
+            
+        </table>
+    </body>
+
+</html>

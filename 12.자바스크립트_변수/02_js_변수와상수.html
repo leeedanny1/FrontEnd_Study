@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 변수와상수</title>
+
+    <script>
+        //strict모드를 사용한다는 의미, 코드를 엄격하게 사용하도록 함
+        'use strict';
+
+        var num;
+        num = 10;
+        //콘솔창에 출력 브라우저에서 f12 눌러서 확인 가능
+        console.log(num); //숫자형변수
+        console.log("num"); //문자형변수
+
+        var num2;
+        console.log(num2); //undefined
+
+        /* strict 모드 사용 시 오류발생
+        num3 = 20;
+        console.log(num3); //error
+        */
+
+
+        let age;
+        age = 20; //숫자열
+        console.log(age);
+
+        let age1;
+        age1 = 20; //숫자열
+
+        let name;
+        name = "이대희"; //문자열
+        console.log(name);
+
+        // 결합
+        // 숫자+문자 -> 문자열
+        // 숫자+숫자 -> 숫자열
+        console.log(age + name);
+        console.log(age + age1);
+
+
+        let number;
+        number="12345"; // 문자열
+        console.log(number);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체3(생성자)</title>
+
+    <script>
+        'use strict';
+
+
+
+        // 객체 하나이상 생성 방법
+        // 기본틀을 만들어두고
+        function Dog(name, color){
+            this.name = name;
+            this.color = color;
+            this.sleep = function(){
+                return `${name}가 잠을 잡니다.`;
+            }
+        }
+        
+        // 객체1생성
+        const Rucy = new Dog("루시", "흰색");
+        console.log(Rucy.name);
+        console.log(Rucy.color);
+        console.log(Rucy.sleep());
+
+        // 객체2생성
+        const Ppomi = new Dog("뽀미", "흰색");
+        console.log(Ppomi.name);
+        console.log(Ppomi.color);
+        console.log(Ppomi.sleep());
+
+        // 객체3생성
+        const Badook = new Dog("바둑이", "흰색");
+        console.log(Badook.name);
+        console.log(Badook.color);
+        console.log(Badook.sleep());
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

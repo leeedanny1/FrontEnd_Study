@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리이벤트_on이벤트</title>
+
+    <style>
+        html * { margin:0; padding:0;  }
+        #wrapper { margin-left:300px; }
+        #nav > input { margin-left:300px; }
+        .box { width:150px; height:150px; border:2px solid blue;}
+        .box.over { background-color: red; }
+        .box.out { background-color: green; }
+        .box.down { background-color: blue; }
+        .box.up { background-color: pink; }
+        .box.click { background-color: brown; }
+        .box > p { padding:30px; color:white; }
+        #nav { margin:20px; }        
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+    
+    <script>
+        // 두가지 같은 의미
+        /*
+        $(document).ready(function(){});
+        $(function(){});
+        */
+        $(function(){
+            $("#wrapper").on({
+                mouseover:function(){
+                    var tg = $(this);
+                    tg.removeClass().addClass("box over");
+                    tg.find("p").text("mouseover");
+                },
+                mouseout:function(){
+                    var tg = $(this);
+                    tg.removeClass().addClass("box out");
+                    tg.find("p").text("mouseout");
+                },
+                click:function(){
+
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <div id="nav">
+        <input type="button" value="box추가">
+    </div>
+    <div id="wrapper">
+        <div class="box out">
+            <p>mouseout</p>
+        </div>
+        <div class="box out">
+            <p>mouseout</p>
+        </div>
+    </div>
+    
+
+</body>
+</html>

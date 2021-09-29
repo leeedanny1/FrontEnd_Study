@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 클래스선택자</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+</head>
+
+<body>
+    <h1>클래스선택자</h1>
+
+    <ul>
+        <li class="txt1">HTML</li>
+        <li class="txt2">css</li>
+        <li class="txt3">javaScript</li>
+        <li class="txt4">jQuery</li>
+        <li class="txt5">PHP</li>
+    </ul>
+
+
+    <script>
+        $(document).ready(function(){ 
+            $(".txt1").css('background','blue');
+            $(".txt2").css({color:"red", background:"green"});
+            $(".txt3").css({color:"violet"});
+            $(".txt4").css({color:"yellow"});
+            $(".txt5").css({color:"blue"});
+        })
+    </script>
+    
+</body>
+</html>

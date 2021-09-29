@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 기초</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        /*기본 배치*/
+        .box1{
+            width: 95%; height: 200px;
+            background-color: goldenrod;
+        }
+
+        .box1 .box1-1{
+            float: left;
+            width: 45%; height: 200px;
+            background-color: greenyellow;
+        }
+        .box1 .box1-2{
+            float: left;
+            width: 40%; height: 200px;
+            background-color: indianred;
+        }
+
+        /*정해준 값일때 변경될 배치*/
+        @media screen and (max-width: 1000px) {
+            .box1{
+                width: 100%; height: 400px;
+                background-color: goldenrod;
+            }
+            .box1 .box1-1{
+                float: none;
+                width: 100%; height: 200px;
+                background-color: greenyellow;
+            }
+            .box1 .box1-2{
+                float: none;
+                width: 100%; height: 200px;
+                background-color: indianred;
+            }
+        }
+
+        /*
+        @media 매체유형
+
+        all: 모든매체 [@media all and (){}]
+        print: 프린터기기 [@media print and (){}]
+        screen: 컴퓨터, 태블릿, 모바일 [@media screen and (){}]
+        speech: 스크린 리더 [@media speech and (){}]
+
+        @media [매체유형] and (조건:크기){}
+        조건종류: max-width, min-width
+        */
+    </style>
+
+</head>
+<body>
+    <div class="box1">
+        <div class="box1-1"></div>
+        <div class="box1-2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 문자열변수</title>
+
+    <script>
+        'use strict';
+
+        const num1 = 10; //숫자열
+        const num2 = 5; //숫자열
+        const str1 = "Hello Javascript"; //문자열
+        const str2 = "Hello World"; //문자열
+        const str3 = "10"; //문자열
+
+
+        console.log(num1 + num2); // 숫자연산
+        console.log(num1 + str1); // 문자연산(결합)
+        console.log(num1 + ""); // 문자연산
+        //typeof() == 변수의 타입을 알려줌
+        console.log(typeof(num1));
+        console.log(typeof(str1));
+
+        console.log(str1 + " \n" + str2); //변수 사이에 문자열 추가 가능
+        
+        /*
+        자바스크립트에서는 문자열을 "" '' 로 둘러싸인 문자의 집합을 의미합니다.
+        */
+
+        console.log(num1 + "+" + num2 + "=" + (num1+num2));
+
+
+        //따옴표를 두개 이상 사용할 경우 다른 따옴표를 사용하면 됨.
+        const str5 = '류정원: "여러분 오늘 자바스크립트 어땠나요?"';
+        console.log(str5);
+        const str6 = "류정원: '여러분 오늘 자바스크립트 어땠나요?'";
+        console.log(str6);
+
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        자바스크립트에서는 문자열을 "" 또는 '' 로 둘러싸인 문자의 집합을 의미합니다.
+    </h1>
+
+</body>
+</html>

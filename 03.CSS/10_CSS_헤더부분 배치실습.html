@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션 실습</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        /* 전체적인 헤더의 스타일 */
+        #header{
+            /*go_btn에서 사용한 position 때문에*/
+            position: relative;
+            margin: 0 auto;
+            width: 1000px; height: 95px;
+            background-color: aqua;
+            }
+
+        /*로고부분 스타일*/
+        #header .logo{
+            float: left; margin: 25px 0 0 35px;
+            width: 140px; height: 45px;
+            background-color: blueviolet;
+        }
+
+        /*내비게이션 틀 스타일*/
+        #header .main_nav{
+            float:  left;
+            margin: 35px 0 0 70px;
+        }
+        /*내비 내부 리스트 스타일*/
+        #header .main_nav li{
+            float: left;
+            list-style-type: none;
+            /* 줄여서 list-style: none; 해도 됨 */
+            margin-right: 15px;
+        }
+        /*내비 글자모양*/
+        #header .main_nav li a{
+            font-size: 20px;
+            color: coral;
+            font-family: "맑은고딕";
+            text-decoration: none;
+        }
+
+        /*인포부분 틀 스타일*/
+        #header .info_mn{
+            float: right;
+            margin: 10px 10px 0 0; 
+        }
+        /*인포 내부 리스트 스타일*/
+        #header .info_mn li{
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+        }
+        /*인포 글자모양*/
+        #header .info_mn li a{
+            font-size: 12px;
+            color: darkmagenta;
+            text-decoration: none;
+        }
+
+        /*인트라넷 부분 스타일*/
+        /*리스트 없이 단순 a태그사용 인라인 스타일로 만들었음*/
+        #header .go_btn{
+            /* position 쓴 경우 부모에 relative 적어주기*/
+            position: absolute; top: 35px; right: 30px;
+            /* 인라인태그는 크기조절 안됨, block 해줘야함 */
+            display: block;
+            width: 120px; height: 25px;
+            font-size: 14px; font-weight: 900;
+            text-decoration: none;
+            color: brown; background-color: #ccc;
+            /* 소문자를 대문자로 */
+            text-transform: uppercase;
+            text-align: center; line-height: 25px;
+        }
+
+        #header .go_btn1{
+            /* position 쓴 경우 부모에 relative 적어주기*/
+            float: right; 
+            margin:5px 30px 0 0;
+            /* 인라인태그는 크기조절 안됨, block 해줘야함 */
+            display: block;
+            width: 120px; height: 25px;
+            font-size: 14px; font-weight: 900;
+            text-decoration: none;
+            color: brown; background-color: #ccc;
+            /* 소문자를 대문자로 */
+            text-transform: uppercase;
+            text-align: center; line-height: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!--헤더선언-->
+        <header id="header">
+            <!--로고-->
+            <div class="logo">
+                <a href="#"><img src="images/logo.jpg" alt=""> </a>
+            </div>
+
+            <!--내비게이션-->
+            <ul class="main_nav">
+                <li><a href="#">회사소개</a></li>
+                <li>|</li>
+                <li><a href="#">사업분야</a></li>
+                <li>|</li>
+                <li><a href="#">제품정보</a></li>
+                <li>|</li>
+                <li><a href="#">채용정보</a></li>
+                <li>|</li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+
+            <!--인포-->
+            <ul class="info_mn">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SITEMAP</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+
+            <!--인트라넷 버튼-->
+            <a href="#" class="go_btn1">intranet</a>
+
+        </header>
+    </div>
+
+</body>
+</html>

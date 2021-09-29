@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴 실습</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #all{margin: 0 auto; position: relative;
+            width: 500px; height: 550px;
+            border: 1px solid;
+        }
+
+        input{display: none;}
+
+        label{
+            display: block; float: left;
+            width: 123px; height: 50px;
+            border: 1px solid #000;
+            text-align: center; line-height: 50px;
+            font-size: 25px; font-weight: 900;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        label:nth-child(1){background-color: red;}
+        label:nth-child(3){background-color: green;}
+        label:nth-child(5){background-color: blue;}
+        label:nth-child(7){background-color: black;}
+
+        .box{
+            position: absolute; top: 51px; left: 0;
+            width: 500px; height: 500px;
+            text-align: center; line-height: 500px;
+            font-size: 50px; font-weight: 900;
+            color: #fff;
+            display: none;
+        }
+        .box1{background-color: red;}
+        .box2{background-color: green;}
+        .box3{background-color: blue;}
+        .box4{background-color: black;}
+
+        #all #mn1:checked ~.box1,
+        #all #mn2:checked ~.box2,
+        #all #mn3:checked ~.box3,
+        #all #mn4:checked ~.box4{display: block;}
+
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <label for="mn1">RED</label>
+        <input type="radio" name="tab" id="mn1" checked>
+        <label for="mn2">GREEN</label>
+        <input type="radio" name="tab" id="mn2">
+        <label for="mn3">BLUE</label>
+        <input type="radio" name="tab" id="mn3">
+        <label for="mn4">BLACK</label>
+        <input type="radio" name="tab" id="mn4">
+
+        <div class="box box1">RED</div>
+        <div class="box box2">GREEN</div>
+        <div class="box box3">BLUE</div>
+        <div class="box box4">BLACK</div>
+
+    </div>
+
+</body>
+</html>

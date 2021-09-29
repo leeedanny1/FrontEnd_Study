@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 위치메소드</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+</head>
+
+<body>
+    <h1 id="css">위치메소드</h1>
+
+    <ul class="main">
+        <li>HTML</li>
+        <li class="css">css</li>
+        <li>javaScript</li>
+        <li class="txt">jQuery</li>
+        <li class="txt">PHP
+            <ul>
+                <li class="parent">HTML</li>
+                <li>css</li>
+                <li>javaScript</li>
+                <li>jQuery</li>
+                <li>PHP
+                    <ul>
+                        <li class="parentEL">HTML</li>
+                        <li>css</li>
+                        <li>javaScript</li>
+                        <li>jQuery</li>
+                        <li>PHP</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <script>
+        $(document).ready(function(){ 
+            // $("li").css("color", "blue");
+            // children 메소드
+            // $(".txt").children("ul").css("color","red");
+            // next 메소드
+            // $(".css").next().css("color","blue");
+            // nextAll 메소드
+            // $(".css").nextAll().css("color","blue");
+            // nextUntil 메소드
+            // $(".main > li").nextUntill(".txt").css("color","blue");
+            // parent 메소드
+            // $(".parentEL").parent().css("color","blue"); //부모하나만
+            // $(".parentEL").parents().css("color","blue"); //위에꺼 모두
+            // find 메소드
+            $(".txt").find(".parent").css("color","red");
+            $(".txt").find(".parentEL").css("color","red");
+
+        })
+    </script>
+    
+</body>
+</html>

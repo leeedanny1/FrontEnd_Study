@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+
+    <script>
+        'use strict';
+
+        let arr = ["루시", 10, 3.5, true];
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        console.log(arr[3]);
+
+        console.log("");
+
+
+        //배열 요소 추가
+        arr[4] = 'white';
+        console.log(arr[4]);
+        arr[5] = '포메리안';
+        console.log(arr[5]);
+
+        console.log("");
+
+
+        //length property: 배열 요소의 갯수
+        console.log(arr.length)
+
+        console.log("");
+
+
+        //length 범위로 정하는 이유 -> 유지보수
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        console.log("");
+
+
+        //pop: 마지막 요소 삭제
+        arr.pop();
+
+        console.log(arr.length);
+        
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

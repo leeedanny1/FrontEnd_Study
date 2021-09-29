@@ -1,0 +1,457 @@
+/*기본스타일시트*/
+
+*{margin: 0; padding: 0;}
+
+body{
+    margin: 0; padding: 0;
+    font-size: 12px; font-family: "맑은고딕";
+    color: #333;
+}
+
+img{border: 0;}
+
+ul, ol, li{list-style: none;}
+
+/*a태그의 가상선택자*/
+a:link{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{color: #000;}
+a:active{color: #000;}
+a:visited{color: #333;}
+
+
+
+/*레이아웃 스타일시트*/
+
+#wrap{width: 100%;}
+
+
+
+/* *****헤더***** */
+#header{
+    float: left;
+    width: 100%;
+}
+
+
+/*헤더상단*/
+#header_top{
+    position: relative;
+    margin: 0 auto;
+    width: 1000px; height: 110px;
+}
+#header_top .logo{
+    float: left;
+    margin: 45px 0 0 5px;
+}
+#header_top .go_btns{
+    float: left;
+    margin: 55px 0 0 150px;
+}
+#header_top .go_btns li{
+    float: left;
+    margin-right: 25px;
+}
+#header_top .go_btns a{
+    font-size: 15px;
+}
+
+#header_top .input_box{
+    float: left;
+    margin: 50px 0 0 10px;
+    width: 260px; height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#header_top .input_box span{
+    margin-left: 10px;
+    line-height: 30px;
+    color: gray;
+}
+#header_top .input_box a{
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+#header_top .info_mn{
+    position: absolute;
+    top: 5px; right: 10px;
+}
+#header_top .info_mn li{
+    float: left;
+    border-right: 1px solid #333;
+    margin-right: 10px;
+    padding-right: 10px;
+    line-height: 11px;
+}
+#header_top .info_mn li.last{
+    border: none;
+}
+#header_top .info_mn li a{
+    border-right: 0 solid #333;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+
+/*내비게이션*/
+#header_nav{
+    width: 100%; height: 50px;
+    background-image: url(../images/nav_area.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header_nav .main_nav{
+    width: 1005px;
+    margin: 0 auto;
+}
+#header_nav .main_nav li{
+    float: left;
+
+}
+
+
+
+/* *****메인이미지***** */
+#main_img{
+    float: left;
+    width: 100%; height: 470px;
+    /*
+    많은 줄 한 줄로 요약해서 작성 가능
+    background-image: url(../images/main_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    */
+    background: url(../images/main_img.jpg) no-repeat center 0;
+}
+
+
+
+/* *****내용***** */
+#contents{
+    float: left;
+    width: 100%;
+}
+
+
+/*POPULAR ITEM*/
+#item{
+    margin: 0 auto; margin-top: 40px;
+    width: 1000px; height: 260px;
+}
+#item .item_h{
+    float: left;
+    width: 170px; height: 260px;
+}
+#item .item_h .ttl{
+    padding: 20px 0;
+    font-size: 25px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+}
+#item .item_h .menu{
+    margin: 30px 0 0 3px;
+}
+#item .item_h .menu li{
+    margin-bottom: 15px;
+}
+#item .item_h .menu a{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#item .item_h .menu a:hover{
+    color: coral;
+    text-decoration: underline;
+}
+#item .item_b{
+    float: right;
+    width: 800px; height: 260px;
+}
+#item .item_b .box{
+    float: left;
+    margin-right: 16px;
+    width: 188px; height: 260px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#item .item_b .box:last-child{
+    margin-right: 0;
+}
+#item .item_b .box img{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#item .item_b .box h4{
+    margin: 15px 0 0 8px;
+    font-size: 14px;
+}
+#item .item_b .box span{
+    display: inline-block;
+    margin: 6px 0 0 8px;
+    font-size: 12px;
+}
+
+
+/*배너1*/
+#banner{
+    margin: 0 auto; margin-top: 40px; margin-bottom: 40px;
+    width: 1000px; height: 280px;
+    text-align: center;
+}
+#banner a{
+    margin-right: 12px;
+}
+#banner a:last-child{
+    margin-right: 0;
+}
+
+
+/*영상배너*/
+#movie{
+    position: relative;
+    width: 100%; height: 300px;
+    background: url(../images/movie.png) no-repeat center 0;
+}
+
+#movie a{
+    display: block;
+    position: absolute; top: 200px; left: 50%;
+    /*
+    position의 left값은 시작점을 말함.
+    그래서 가로길이의 반절만큼 왼쪽으로 이동시켜주어야
+    진짜 가운데가 됨
+    */
+    margin-left: -85px;
+    width: 170px; height: 50px;
+    border: 1px solid #fff;
+    font-size: 16px; color: #fff; font-weight: 500;
+    text-align: center; line-height: 50px;
+    text-transform: uppercase;
+    background-color: #ccc;
+}
+#movie a:hover{
+    background-color: #fff; color: black;
+}
+
+
+/*STYLE OF THE WEEK*/
+#style{
+    margin: 0 auto; margin-top: 40px;
+    width: 1000px; height: 260px;
+}
+#style .style_h{
+    float: left;
+    width: 170px; height: 260px;
+}
+#style .style_h .ttl{
+    padding: 20px 0;
+    font-size: 25px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+}
+#style .style_h .menu{
+    margin: 30px 0 0 3px;
+}
+#style .style_h .menu li{
+    margin-bottom: 15px;
+}
+#style .style_h .menu a{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#style .style_h .menu a:hover{
+    color: coral;
+    text-decoration: underline;
+}
+#style .style_b{
+    float: right;
+    width: 800px; height: 260px;
+}
+#style .style_b .box li{
+    float: left;
+    margin-right: 16px;
+    width: 188px; height: 260px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#style .style_b .box li:last-child{
+    margin-right: 0;
+}
+#style .style_b .box li img{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#style .style_b .box li h4{
+    margin: 15px 0 0 8px;
+    font-size: 14px;
+}
+#style .style_b .box li span{
+    display: inline-block;
+    margin: 6px 0 0 8px;
+    font-size: 12px;
+}
+
+
+/*배너2*/
+#banner2{
+    margin: 0 auto; margin-top: 40px; margin-bottom: 80px;
+    width: 1000px; height: 395px;
+}
+
+/*
+마진으로 이미지 정렬은 인라인 방식으로 밖에 정렬을 못 함
+세로정렬하려면 문단의 그룹을 만들어줘야 함
+*/
+#banner2 .group{
+    float: left;
+    width: 492px; height: 395px;
+}
+#banner2 .group img:first-child{
+    margin-bottom: 13px;
+}
+#banner2 > img{
+    float: right;
+}
+
+
+/*인포*/
+#info{
+    width: 100%; height: 165px;
+    background-image: url(../images/footer_top_bg.jpg);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+
+#info .info_top{
+    margin: 0 auto;
+    width: 1000px; height: 112px;
+}
+#info .info_top img{
+    float: left;
+}
+#info .info_bottom{
+    margin: 0 auto;
+    width: 1000px; height: 50px;
+    background-color: burlywood;
+}
+#info .ttl{
+    float: left;
+    line-height: 50px;
+    font-size: 13px; color: #fff;    
+    text-transform: uppercase;
+}
+#info .txt{
+    float: left;
+    margin-left: 50px; line-height: 50px;
+    font-size: 12px; color: #fff;
+}
+#info .date{
+    float: right;
+    line-height: 50px;
+    font-size: 12px; color: #fff;
+}
+
+
+
+/* *****푸터***** */
+#footer{
+    float: left;
+    width: 100%;
+}
+
+
+#footer_top{
+    margin: 0 auto;
+    width: 1000px; height: 200px;
+}
+
+#footer_top .main_mn{
+    float: left;
+    margin: 20px 0 0 10px;
+}
+/*
+자식선택자.
+바로밑의 자식만 적용됨
+*/
+#footer_top .main_mn > li{
+    float: left;
+    margin-right: 80px;
+}
+#footer_top .main_mn > li:last-child{
+    margin-right: 0;
+}
+#footer_top .sub_mn{}
+#footer_top .sub_mn > li{
+    margin-bottom: 5px;
+}
+#footer_top .sub_mn > li:first-child{
+    margin-bottom: 8px;
+}
+#footer_top .call_center{
+    float: right;
+    width: 250px;
+}
+#footer_top .call_center h3{
+    font-size: 30px; color: #000;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding: 8px 0;
+}
+#footer_top .call_center h4{
+    margin-top: 15px; padding-left: 5px;
+    font-size: 14px; color: #000;
+}
+#footer_top .call_center p{
+    margin-top: 5px; padding-left: 5px;
+    font-size: 12px; color: #333;
+}
+
+#footer_bottom{
+    /*border 선 하나가 지나가서 100%로 잡음*/
+    width: 100%; height: 140px;
+    border-top: 2px solid #000;
+}
+
+#footer_bottom .in_box{
+    margin: 0 auto;
+    width: 1000px; height: 140px;
+    background-color: khaki;
+}
+#footer_bottom .logo{
+    float: left; margin: 40px 0 0 10px;
+}
+#footer_bottom .group{
+    float: left;
+    width: 580px; height: 140px;
+    background-color: violet;
+}
+#footer_bottom .info_mn{}
+#footer_bottom .info_mn li{
+    float: left;
+    margin-right: 10px; padding-right: 10px;
+    border-right: 1px solid;
+    line-height: 15px;
+}
+/*
+형제 선택자 중 n번째 대상 선택하는 방법
+:nth-child(n){}
+n값 속성
+odd: 홀수번째 대상, even: 짝수번째 대상
+*/
+#footer_bottom .info_mn li:first-child{
+    padding-left: 0;
+}
+#footer_bottom .info_mn li:last-child{
+    padding-right: 0; margin-right: 0;
+    border: none;
+}
+#footer_bottom .info_mn a{
+    font-size: 15px; font-weight: 900;
+}

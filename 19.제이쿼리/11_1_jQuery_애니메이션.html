@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+    <script>
+        $(function(){
+            $(".box").hide();
+
+            //show, hide
+            $(".show_btn").click(function(){
+                // $(".box").show();
+                // 시간지정가능
+                $(".box").show(1000);
+            });
+            $(".hide_btn").click(function(){
+                $(".box").hide(500);
+            });
+
+            //fadeIn, out, toggle
+            $(".fadeIn_btn").click(function(){
+                $(".box").fadeIn(1000);
+            });
+            $(".fadeOut_btn").click(function(){
+                $(".box").fadeOut(500);
+            });
+            $(".fadeToggle_btn").click(function(){
+                $(".box").fadeToggle(500);
+            });
+
+            //slideup, down
+            $(".slideDown_btn").click(function(){
+                $(".box").slideDown(500);
+            });
+            $(".slideUp_btn").click(function(){
+                $(".box").slideUp(500);
+            });
+
+            //fadeTo, 투명도
+            $(".fadeTo_btn").click(function(){
+                $(".box").fadeTo(500,0.2);
+            });
+
+
+            $(".start").click(function(){
+                $(".box0").animate({width:"1000px"},1000);
+                $(".box1").animate({width:"1000px"},2000);
+                $(".box2").animate({width:"1000px"},3000);
+            });
+            $(".stop").click(function(){
+                $(".box0").stop();
+                $(".box1").stop();
+                $(".box2").stop();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div style="padding: 10px;">
+        <input type="button" value="show" class="show_btn">
+        <input type="button" value="hide" class="hide_btn">
+
+        <hr>
+
+        <input type="button" value="fadeIn" class="fadeIn_btn">
+        <input type="button" value="fadeOut" class="fadeOut_btn">
+
+        <input type="button" value="fadeToggle" class="fadeToggle_btn">
+
+        <hr>
+
+        <input type="button" value="slideDown" class="slideDown_btn">
+        <input type="button" value="slideUp" class="slideUp_btn">
+
+        <hr>
+
+        <input type="button" value="fadeTo" class="fadeTo_btn">
+
+        <hr>
+
+        <input type="button" value="start" class="start">
+        <input type="button" value="stop" class="stop">
+
+
+    </div>
+    <div class="box" style=
+    "width: 150px; height: 150px; border: 2px solid;">
+        box
+    </div>
+
+    <div class="box0" style="width: 150px; height: 150px; border: 2px solid;">box0</div>
+    <div class="box1" style="width: 150px; height: 150px; border: 2px solid;">box1</div>
+    <div class="box2" style="width: 150px; height: 150px; border: 2px solid;">box2</div>
+    
+</body>
+</html>

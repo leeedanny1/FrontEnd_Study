@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 - 사용자에 의한 움직임</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+
+        /*
+        transition 애니메이션 실행 속성
+
+        transition-delay: 애니메이션의 지연시간을 지정함
+        transition-duration: 애니메이션의 실행시간을 지정함
+        transition-property: 어떤 속성을 변형할지 지정함
+        transition-timing-function: 애니메이션의 속도 형태를 지정함
+            :linear: 시작에서 끝까지 같은 속도로 진행
+            :ease: 천천히 - 빨라지다 - 천천히
+            :ease-in: 시작은 느리게
+            :ease-out: 끝을 느리게
+            :ease-un-out 느리게 시작 - 보통 - 느리게 끝
+        */
+
+        /*자기 자신에게 애니메이션*/
+        .box1{
+            margin: 50px;
+            width: 150px; height: 150px;
+            background-color: rgba(34, 114, 168, 1);
+            transform: rotate(0);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .box1:hover{
+            width: 200px;
+            background-color: saddlebrown;
+            transform: rotate(45deg);
+            /*대기시간*/
+            transition-delay: 0.5s;
+            /*움직이는 시간*/
+            transition-duration: 5s;
+            /*생략가능*/
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+        }
+
+
+        /*
+        대상의 자식요소 애니메이션 효과 적용
+        :hover .inbox
+        */
+        .box2{
+            margin: 50px;
+            width: 100px; height: 100px; border: 5px solid;
+        }
+        .box2 .inbox{
+            width: 100px; height: 100px; 
+            background-color: brown;
+            transform: translate(0, 0);
+        }
+        .box2:hover .inbox{
+            transform: translate(1000px, 0);
+            transition-delay: 1s;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+
+        }
+
+
+        /*
+        대상의 바로 옆 (아래)요소에 애니메이션 적용
+        :hover + .box4
+        */
+        .box3{
+            width: 200px; height: 150px;
+            background-color: chartreuse;
+        }
+        /*position 또는 transform: translate() 둘중 하나만 써야함*/
+        .box4{
+            width: 200px; height: 150px;
+            background-color: darkgoldenrod;
+            position: absolute; top: 560px; left: 0;
+            /*
+            transform: translate(0,0);
+            현재 요소의 위치기준으로 좌표설정
+            */
+        }
+
+        .box3:hover + .box4{
+            position: absolute; top: 200px; left: 1000px;
+            /*
+            transform: translate(500px, 0);
+            현재 요소의 위치기준으로 좌표설정
+            */
+            transition-delay: 2s;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+        }
+
+
+        /*
+        대상 요소에서 멀리 떨어진 요소에 애니메이션 적용
+        다음(아래)대상만 적용 가능
+        :hover ~ .box5
+        */
+        .box3-0{
+            width: 200px; height: 200px;
+            background-color: darkgreen;
+        }
+        .box5{
+            width: 60px; height: 100px;
+            background-color: darkgrey;
+            transition: 0.5s;
+        }
+
+        .box3-0:hover ~ .box5{
+            width: 1500px; width: 100;
+            background-color: darkmagenta;
+            transition-delay: 1s;
+            transition-duration: 5s;
+            transition-timing-function: ease-in-out;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">
+        <div class="inbox">box2_inbox</div>
+    </div>
+
+    <div class="box3-0">box3-0</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+
+</body>
+</html>

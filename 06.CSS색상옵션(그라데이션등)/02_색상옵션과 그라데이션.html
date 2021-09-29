@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상옵션과 그라데이션</title>
+
+    <!--
+        색상값 찾아주는 사이트
+        http://www:colorpicker.com
+        hsla값도 찾아줌
+        http://www.workwithcolor.com/hsl-color-picker-01.htm
+        그라데이션 사이트
+        http://colorzilla.com/gradient-editor
+    -->
+
+    <style>
+        *{margin: 0; padding: 0;}
+        div{width: 150px; height: 100px;}
+        .box1{
+            float: left;
+            width: 60%;
+            background-color: aqua;
+        }
+        .box2{
+            float: left;
+            width: 60%;
+            background-color: #00ff00;
+        }
+        .box3{
+            float: left;
+            width: 60%;
+            background-color: #EB29FF;
+        }
+        /*rgba 속성*/
+        /*
+        rgba(red, green, blue(0~255), 투명도(0~1))
+        */
+        .box4{
+            float: left;
+            width: 60%;
+            background-color: rgba(235, 41, 255, 0.5);
+        }
+        /*hsla 속성*/
+        /*
+        hsla(색상, 채도, 명도, 투명도)
+        색상== 0~255
+        채도== 0~100%
+        명도== 밝기, 0~100%
+        */
+        .box5{
+            float: left;
+            width: 60%;
+            background-color: hsla(308, 96%, 45%, 1);
+        }
+
+        /*그라데이션 옵션*/
+        .box6{
+            float: left;
+            width: 60%;
+            /*그라데이션 효과가 적용이 안될 때 기본배경색 설정*/
+            background: #fff132;
+            /*css3버전이라서 접두사 붙여주는게 좋음*/
+            /*크롬*/
+            background: -webkit-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*익스플로러*/
+            background: -ms-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*모질라 파이어폭스*/
+            background: -moz-linear-gradient(top, #fff132 1%, #ff8989 100%);
+            /*오페라*/
+            background: -o-linear-gradient(top, #fff132 1%, #ff8989 100%);
+        }
+        /*그라데이션 속성 추가*/
+        /*
+        색상값의 %는 색깔의 위치를 의미함
+
+        linear-gradient(방향deg, 색상1, 색상2, 색상...) == 직선그라데이션
+        linear-gradient(top/right/left/bottom, 색상1, 색상2, 색상...)
+
+        radial-gradient(색상1, 색상2, 색상...) == 동그란 그라데이션, 방향이 없음.
+        radial-gradient(색상1, 색상2, 색상...)
+        */
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>   
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+
+    <!--그라데이션박스-->
+    <div class="box6">box6</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin, padding</title>
+
+    <style>
+        /*
+        margin: 개체의 여백
+        padding: 개체 내부의 여백
+        */
+
+        /*
+        마진을 주는 요소(태그)에는 가로세로 크기가 있어야 적용이 됨
+
+        margin 선언방법
+        margin 0;           - 4방향 같은값 선언
+        margin 0 0;         - 세로 가로 선언
+        margin 0 center;    - 자신을 가운데 배치 할 때 (자주사용됨)
+                              자신의 좌우로 아무것도 없어야 함
+        margin 0 0 0;       - 상 가로 아래 선언, 가로동일 세로다르게
+        margin 0 0 0 0;     - 상 우 하 좌 선언, 제일많이사용
+
+        추가 속성, 한쪽 방향만 주려고 할 때
+        margin-top, "-right, "-bottom, "-left
+
+        
+        padding 옵션도 margin과 동일함.
+        패딩은 안쪽 여백이므로 
+        값이 개체의 크기에서 벗어나면 개체크기가 자동으로 바뀜
+        */
+
+        *{margin: 0; padding: 0;}
+
+        div{width: 100px; height: 100px;}
+        .box1{background-color: blueviolet;
+            /*마진은 자기자신, text-align은 내부요소*/
+            margin: 0 0 0 0;
+            text-align: center}
+        .box2{background-color: chartreuse;}
+
+        .box3{background-color: darkgray;
+            width: 500px; height: 500px;
+            padding: 100px 0 0 0;}
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+
+    <div class="box3">
+        box3box3box3box3box3box3box3box3box3box3 <br>
+        box3box3box3box3box3box3box3box3box3box3 <br>
+        box3box3box3box3box3box3box3box3box3box3
+    </div>
+
+    
+</body>
+</html>

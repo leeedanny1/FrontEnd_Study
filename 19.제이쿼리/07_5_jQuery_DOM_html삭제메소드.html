@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-html메소드</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.4.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#wrap > ul > li").eq(1).remove();
+
+            $(".del_btn").click(function(){
+                $("#wrap").remove();
+            })
+            
+            $("#input_btn").click(function(){
+                $("#wrap > ul > li").eq(2).append($(".list").html());
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <h1>remove()메서드와 detach()메서드의 차이</h1>
+    <span>remove()메서드의 경우 엘리먼트를 삭제하면 바인딩된 이벤트나 저장된 데이터가 메모리에서 삭제 된다. <br>
+    detach()메서드의 경우 엘리먼트를 삭제하면 바인딩된 이벤트나 저장된 다에터가 남아있어 해당 엘리먼트를 변수에 담았다가 다시 붙이면 이벤트와 제이터가 남아있는것을 볼 수 있다.</span>
+
+    <hr>
+
+    <div id="wrapper">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <div id="wrap">
+                    <ul>
+                        <li>3-1</li>
+                        <li>3-2(이 부분을 삭제)</li>
+                        <li>3-3</li>
+                        <li>3-4</li>
+                        <li>3-5</li>
+                    </ul>
+                </div>
+            </li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <ul class="list">
+            <li>3-1</li>
+            <li>3-2</li>
+            <li>3-3</li>
+            <li>3-4</li>
+            <li>3-5</li>
+        </ul>
+    </div>
+
+    <button class="del_btn">wrap 삭제하기</button>
+    <button class="input_btn">wrap 추가하기</button>
+
+</body>
+</html>
