@@ -1,0 +1,17 @@
+CSS Module
+리액트 프로젝트에서 컴포넌트를 스타일링 할 때 CSS Module 기술을 사용하면 CSS 클래스가 중첩되는 것을 완벽히 방지할 수 있습니다.
+
+* CSS 파일 확장자를 .module.css로 해야함
+
+
+react-icons
+(https://react-icons.github.io/react-icons/#/)
+
+yarn add react-icons
+
+
+styled-components
+JS안에 CSS를 작성하는 라이브러리입니다. 
+
+yarn add styled-components
+
